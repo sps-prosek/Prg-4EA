@@ -1,0 +1,19 @@
+.box {
+    width: 50%;
+    height: 200px;
+}
+
+.green {
+    background-color: green;
+    margin-left: 250px;
+}
+
+.blue {
+    background-color: blue;
+    margin-left: 450px;
+}
+
+.red {
+    background-color: red;
+    margin: 50px 0 0 50px;
+}
