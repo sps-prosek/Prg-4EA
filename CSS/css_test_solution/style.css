@@ -1,0 +1,66 @@
+/* ------ tag selectors ------ */
+
+body {
+  margin-top: 57px;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  width: 25%;
+}
+
+/* ------ class selectors ------ */
+
+/* top bar */
+
+.topBar {
+  position: fixed;
+  padding: 10px;
+  width: 100%;
+  background-color: rgba(255, 165, 0, 0.5);
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.logo {
+  display: inline-block;
+  position: absolute;
+}
+
+.logoText1 {
+  color: orange;
+}
+
+.heading {
+  text-align: center;
+}
+
+/* menu */
+
+.foodBox {
+  padding: 6%;
+  margin: 3%;
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4%;
+  border: 2px solid;
+}
+
+.foodBox:hover {
+  margin: 0;
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.foodImg {
+  width: 100%;
+}
+
+.foodName {
+  display: block;
+  font-weight: bold;
+  font-size: 25px;
+}
