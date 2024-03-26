@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dec2bin(input) {
+            let dec = input;
+            let output = "";
+            while (dec > 0) {
+                if (dec % 2) {
+                    output = "1" + output;
+                } else {
+                    output = "0" + output;
+                }
+                dec = Math.floor(dec / 2)
+            }
+            document.getElementById("txt").innerHTML = output;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" name="Dec number" id="dec" oninput="dec2bin(this.value)">
+    <h2 id="txt"></h2>
+</body>
+
+</html>

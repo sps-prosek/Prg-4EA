@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bulb {
+            position: absolute;
+        }
+    </style>
+    <script>
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min) ) + min;
+        }
+
+        let state = false;
+        let score = 0;
+        let started = false;
+
+        function stop() {
+            bulb = document.getElementById("bulb");
+            bulb.src = "images/bulboff.gif";
+            started = false;
+            alert("Your score is " + score);
+        }
+
+        function bulbSwitch() {
+            bulb = document.getElementById("bulb");
+            bulb.style.left = String(getRndInteger(10, 90)) + "vw";
+            bulb.style.top = String(getRndInteger(10, 90)) + "vh";
+            score += 1;
+            if (!started) {
+                started = true;
+                score = 0;
+                setTimeout(stop, 10000);
+                bulb.src = "images/bulbon.gif";
+            }
+            document.getElementById("txt").innerHTML = "Score = " + score;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="txt">Score = 0</h1>
+    <img id="bulb" src="images/bulboff.gif" alt="Bulb" onclick="bulbSwitch()" draggable="false">
+</body>
+
+</html>

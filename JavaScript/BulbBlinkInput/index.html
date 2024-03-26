@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let state = false;
+        let run = false;
+        let interval;
+        let period_ms = 500;
+        function toggle() {
+            run = !run;
+            console.log("toggle " + run);
+            if (run) {
+                console.log("blink " + period_ms + " ms");
+                interval = setInterval(periodic, period_ms);
+            } else {
+                clearInterval(interval);
+                document.getElementById("bulb").src = "images/bulboff.gif";
+            }
+        }
+
+        function periodic() {
+            let bulb = document.getElementById("bulb");
+            state = !state;
+            if (state) {
+                bulb.src = "images/bulbon.gif";
+            } else {
+                bulb.src = "images/bulboff.gif";
+            }
+        }
+    </script>
+</head>
+
+<body> <img id="bulb" src="images/bulboff.gif" alt="Bulb"> <button onclick="toggle()">Toggle</button> <input
+        type="number" oninput="period_ms = this.value"> </body>
+
+</html>
